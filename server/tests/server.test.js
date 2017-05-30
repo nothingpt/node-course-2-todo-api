@@ -23,7 +23,7 @@ describe('POST /todos', function () {
       })
       .end((err, res) => {
         if (err){
-          done(err);
+          return done(err);
         }
 
         Todo.find().then((todos) => {
@@ -40,7 +40,7 @@ describe('POST /todos', function () {
       .expect(400)
       .end((err, res) => {
         if (err){
-          done(err);
+          return done(err);
         }
 
         Todo.find().then((todos) => {
