@@ -23,11 +23,10 @@ app.post('/todos', (req, res) => {
   })
 });
 
-// Add a new user
-app.post('/users', (req, res) => {
-
-});
-
 app.listen(3000, () => {
   console.log('Started at port 3000');
 });
+
+module.exports = {
+  app
+};
